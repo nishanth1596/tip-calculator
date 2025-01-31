@@ -3,9 +3,26 @@ type TipProps = {
 };
 
 const Tip = ({ tipPercent }: TipProps) => {
-  if (!tipPercent) return <div>Custom</div>;
+  // const active = { backgroundColor: "#26C2AE", color: "#00474B" };
 
-  return <div>{tipPercent}%</div>;
+  if (!tipPercent)
+    return (
+      <div
+        className="bg-F3F9FA text-547878 rounded-md py-1.5 pl-5 text-2xl leading-9 font-bold"
+        // style={active}
+      >
+        Custom
+      </div>
+    );
+
+  return (
+    <div
+      // style={active}
+      className="bg-00474B rounded-md px-4 py-1.5 text-2xl leading-9 font-bold text-white"
+    >
+      {tipPercent}%
+    </div>
+  );
 };
 
 export default Tip;
