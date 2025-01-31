@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color */
+  --color-C5E4E7: #c5e4e7;
+  --color-3D6666: #3d6666;
+  --color-5E7a7d: #5e7a7d;
+  --color-9EBBBD: #9ebbbd;
+  --color-F3F9FA: #f3f9fa;
+
+  /* Font Family */
+  --font-spaceMono: "Space Mono", "serif";
+}
