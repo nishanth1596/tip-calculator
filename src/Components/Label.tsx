@@ -7,8 +7,8 @@ const Label = ({ img, name }: LabelProps) => {
   return (
     <>
       <label
-        className="text-5 text-5E7a7d block text-base leading-6 font-bold capitalize"
         htmlFor="bill"
+        className="text-5 text-5E7a7d block text-base leading-6 font-bold capitalize"
       >
         {name}
       </label>
