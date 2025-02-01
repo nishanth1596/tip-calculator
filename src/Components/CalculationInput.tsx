@@ -34,9 +34,9 @@ const CalculationInput = ({
         setBill={setBill}
         inputValue={bill}
       />
-      <h3 className="text-5E7a7d mt-8 text-base leading-6 font-bold md:mt-10">
+      <h2 className="text-5E7a7d mt-8 text-base leading-6 font-bold md:mt-10">
         Select Tip %
-      </h3>
+      </h2>
       <div className="mt-4 grid grid-cols-2 gap-4 text-center md:grid-cols-3">
         <Tip
           tipPercent={5}
