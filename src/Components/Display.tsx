@@ -1,4 +1,9 @@
-const Display = () => {
+type DisplayProps = {
+  amount: number;
+  numPpl: number;
+};
+
+const Display = ({ amount, tipAmount, handleReset }: DisplayProps) => {
   return (
     <div className="bg-00474B mx-6 rounded-2xl px-6 pt-9 pb-6 text-white md:my-8 md:mr-8 md:p-10">
       <div className="flex items-center justify-between md:mt-4 md:pb-2.5">
@@ -7,7 +12,7 @@ const Display = () => {
           <span className="text-7F9D9F block text-sm leading-5">/ person</span>
         </h3>
         <p className="text-26C2AE text-[2rem] leading-12 font-bold tracking-[-.67px]">
-          $X
+          ${tipAmount ? tipAmount : "0.00"}
         </p>
       </div>
 
@@ -20,12 +25,15 @@ const Display = () => {
             </span>
           </h3>
           <p className="text-26C2AE text-[2rem] leading-12 font-bold tracking-[-.67px]">
-            $X
+            ${amount}
           </p>
         </div>
       </div>
 
-      <button className="bg-26C2AE text-00474B mt-8 w-full rounded-md px-8 py-2.5 text-xl leading-[1.875rem] font-bold uppercase md:mt-[7.63rem]">
+      <button
+        onClick={handleReset}
+        className="bg-26C2AE text-00474B mt-8 w-full rounded-md px-8 py-2.5 text-xl leading-[1.875rem] font-bold uppercase md:mt-[7.63rem]"
+      >
         Reset
       </button>
     </div>
