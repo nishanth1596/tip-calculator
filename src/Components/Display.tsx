@@ -1,6 +1,7 @@
 type DisplayProps = {
-  amount: number;
-  numPpl: number;
+  amount: number | string;
+  tipAmount: number | string;
+  handleReset: () => void;
 };
 
 const Display = ({ amount, tipAmount, handleReset }: DisplayProps) => {
@@ -32,7 +33,7 @@ const Display = ({ amount, tipAmount, handleReset }: DisplayProps) => {
 
       <button
         onClick={handleReset}
-        className="bg-26C2AE text-00474B mt-8 w-full rounded-md px-8 py-2.5 text-xl leading-[1.875rem] font-bold uppercase md:mt-[7.63rem]"
+        className="bg-26C2AE hover:bg-9FE8DF text-00474B mt-8 w-full cursor-pointer rounded-md px-8 py-2.5 text-xl leading-[1.875rem] font-bold uppercase md:mt-[7.63rem]"
       >
         Reset
       </button>

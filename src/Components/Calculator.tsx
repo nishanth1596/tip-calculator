@@ -3,23 +3,26 @@ import CalculationInput from "./CalculationInput";
 import Display from "./Display";
 
 const Calculator = () => {
-  const [bill, setBill] = useState();
-  const [tip, setTip] = useState();
-  const [numPpl, setNumPpl] = useState(0);
+  const [bill, setBill] = useState<number | null>();
+  const [tip, setTip] = useState<number | null>();
+  const [numPpl, setNumPpl] = useState<number | null>(0);
 
-  const amount = numPpl
-    ? (Math.round((bill * tip) / 100) + bill) / numPpl
-    : "0.00";
+  const amount =
+    bill && tip && numPpl
+      ? (Math.round((bill * tip) / 100) + bill) / numPpl
+      : "0.00";
   const tipAmount =
-    numPpl > 0 ? parseFloat(((tip * bill) / 100 / numPpl).toFixed(2)) : "0.00";
+    bill && tip && numPpl
+      ? parseFloat(((tip * bill) / 100 / numPpl).toFixed(2))
+      : "0.00";
 
-  function handletip(value) {
+  function handletip(value: number): void {
     setTip(value);
   }
 
   function handleReset(): void {
-    setBill();
-    setTip();
+    setBill(null);
+    setTip(null);
     setNumPpl(0);
   }
 
