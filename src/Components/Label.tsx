@@ -34,7 +34,7 @@ const Label = ({
   return (
     <form onSubmit={handleSubmit} noValidate>
       <label
-        htmlFor={name}
+        htmlFor={id}
         className="text-5 text-5E7a7d block text-base leading-6 font-bold capitalize"
       >
         {name}
