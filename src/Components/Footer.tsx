@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="absolute bottom-0 left-1/2 hidden w-full -translate-x-1/2 animate-pulse text-center text-white">
+    <footer className="absolute bottom-0 left-1/2 w-full -translate-x-1/2 animate-pulse text-center text-white">
       Challenge by{""}
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
         Frontend Mentor
