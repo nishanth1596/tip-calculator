@@ -10,8 +10,7 @@ const Label = ({
   id,
   setBill,
   setNumPpl,
-  register,
-  handleSubmit,
+  inputValue,
 }: LabelProps) => {
   function handleChange(e) {
     if (id === "bill") {
@@ -23,12 +22,12 @@ const Label = ({
     }
   }
 
-  function onSubmit(data) {
-    console.log(data);
+  function handleSubmit(e) {
+    e.preventDefault();
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} noValidate>
+    <form onSubmit={handleSubmit} noValidate>
       <label
         htmlFor={name}
         className="text-5 text-5E7a7d block text-base leading-6 font-bold capitalize"
@@ -41,7 +40,7 @@ const Label = ({
           className="bg-F3F9FA text-00474B w-full py-1.5 pr-[1.13rem] text-right text-2xl leading-9 font-bold"
           type="number"
           id={id}
-          {...register(id)}
+          value={inputValue || ""}
           onChange={handleChange}
         />
       </div>

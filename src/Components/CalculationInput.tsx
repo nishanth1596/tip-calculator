@@ -3,14 +3,7 @@ import dollarImg from "../assets/icon-dollar.svg";
 import personIcon from "../assets/icon-person.svg";
 import Label from "./Label";
 
-const CalculationInput = ({
-  setBill,
-  handletip,
-  setNumPpl,
-  register,
-  handleSubmit,
-  control,
-}) => {
+const CalculationInput = ({ setBill, handletip, setNumPpl, bill, numPpl }) => {
   return (
     <div className="p-8 md:pt-11 md:pr-0 md:pb-12 md:pl-12">
       <Label
@@ -18,9 +11,7 @@ const CalculationInput = ({
         name="bill"
         id="bill"
         setBill={setBill}
-        register={register}
-        handleSubmit={handleSubmit}
-        control={control}
+        inputValue={bill}
       />
       <h3 className="text-5E7a7d mt-8 text-base leading-6 font-bold md:mt-10">
         Select Tip %
@@ -40,9 +31,7 @@ const CalculationInput = ({
           id="numberOfPeople"
           img={personIcon}
           setNumPpl={setNumPpl}
-          register={register}
-          handleSubmit={handleSubmit}
-          control={control}
+          inputValue={numPpl}
         />
       </div>
     </div>
